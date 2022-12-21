@@ -1,15 +1,17 @@
-import java.util.ArrayDeque;
+import java.util.Comparator;
+import java.util.PriorityQueue;
 
 public class Main {
     public static void main(String[] args) {
-        ArrayDeque <String> ad=new ArrayDeque<>();
-        ad.push("a");   //can also use ad.push()
-        ad.push("b");
-        ad.push("c");
-        ad.pop();
+        PriorityQueue<Integer> pq=new PriorityQueue<>(Comparator.reverseOrder());
 
-        System.out.println(ad);
+        pq.add(4);
+        pq.add(5);
+        pq.add(6);
+        pq.remove(2);
 
-
+        System.out.println(pq);
+        System.out.println(pq.poll());
+        System.out.println(pq);
     }
 }
